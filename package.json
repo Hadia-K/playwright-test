@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.10",
+    "playwright": "^1.53.2"
+  },
+  "scripts": {
+    "pretest": "tsc --incremental -p tests/tsconfig.json",
+    "test": "playwright test -c tests-out"
+  },
+  "dependencies": {
+    "dotenv": "^17.1.0"
+  }
+}
