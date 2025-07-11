@@ -8,6 +8,16 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    
+    env:
+      BASE_URL: ${{ secrets.BASE_URL }}
+      SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+      INCORRECT_USERNAME: ${{ secrets.INCORRECT_USERNAME }}
+      LOCKED_OUT_USERNAME: ${{ secrets.LOCKED_OUT_USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+      CHECKOUT_FIRST_NAME: ${{ secrets.CHECKOUT_FIRST_NAME }}
+      CHECKOUT_LAST_NAME: ${{ secrets.CHECKOUT_LAST_NAME }}
+      ZIP: ${{ secrets.ZIP }}
 
     steps:
     - uses: actions/checkout@v4
